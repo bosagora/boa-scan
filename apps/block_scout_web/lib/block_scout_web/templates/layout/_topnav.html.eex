@@ -77,7 +77,7 @@
               </span>
               <%= gettext("Tokens") %>
             </a>
-            <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown"> 
+            <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown">
               <%= link(
                     gettext("All"),
                     class: "dropdown-item #{tab_status("tokens", @conn.request_path)}",
@@ -99,7 +99,7 @@
               </span>
               <%= gettext("APIs") %>
             </a>
-            <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown"> 
+            <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown">
               <%= link(
                     gettext("GraphQL"),
                     class: "dropdown-item #{tab_status("graphiql", @conn.request_path)}",
@@ -154,25 +154,28 @@
             </span>
             <%= subnetwork_title() %>
           </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> 
-            <%= if Enum.count(main_nets) > 0 do %>
-              <a class="dropdown-item header division">Mainnets</a> 
-              <%= for %{url: url, title: title} <- main_nets do %>  
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= if Enum.count(dropdown_head_main_nets()) > 0 do %>
+              <a class="dropdown-item header division">MainNet</a>
+              <%= for %{url: url, title: title} <- dropdown_head_main_nets() do %>
                 <a class="dropdown-item" href="<%= url %>"><%= title %></a>
               <% end %>
             <% end %>
-            <%= if Enum.count(test_nets) > 0 do %>
-              <a class="dropdown-item header division">Testnets</a> 
-              <%= for %{url: url, title: title} <- test_nets do %> 
+            <%= if Enum.count(test_nets(dropdown_nets())) > 0 do %>
+              <a class="dropdown-item header division">TestNet</a>
+              <%= for %{url: url, title: title} <- test_nets(dropdown_nets()) do %>
                 <a class="dropdown-item" href="<%= url %>"><%= title %></a>
               <% end %>
             <% end %>
-            <%= if Enum.count(other_nets) > 0 do %>
-              <a class="dropdown-item header division">Other Networks</a> 
-              <%= for %{url: url, title: title} <- other_nets do %>  
+            <%= if Enum.count(dropdown_other_nets()) > 0 do %>
+              <a class="dropdown-item header division">Other Networks</a>
+              <%= for %{url: url, title: title} <- dropdown_other_nets() do %>
                 <a class="dropdown-item" href="<%= url %>"><%= title %></a>
-              <% end %> 
+              <% end %>
             <% end %>
+
+
+
           </div>
         </li>
         <!-- Dark mode changer -->
