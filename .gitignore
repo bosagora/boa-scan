@@ -51,3 +51,4 @@ screenshots/
 *.iml
 
 .vscode
+/*.iml
