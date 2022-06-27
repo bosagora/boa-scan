@@ -144,6 +144,23 @@ defmodule BlockScoutWeb.LayoutView do
     |> Enum.sort()
   end
 
+  def all_networks do
+    get_other_networks =
+      if Application.get_env(:block_scout_web, :other_networks) do
+        try do
+          :block_scout_web
+          |> Application.get_env(:other_networks)
+          |> Parser.parse!(%{keys: :atoms!})
+        rescue
+          _ ->
+            []
+        end
+      else
+        @default_other_networks
+      end
+      |> Enum.sort()
+  end
+
   def main_nets(nets) do
     nets
     |> Enum.reject(&Map.get(&1, :test_net?))
@@ -155,8 +172,7 @@ defmodule BlockScoutWeb.LayoutView do
   end
 
   def dropdown_nets do
-    other_networks()
-    |> Enum.reject(&Map.get(&1, :hide_in_dropdown?))
+    all_networks()
   end
 
   def dropdown_main_nets do
@@ -172,7 +188,6 @@ defmodule BlockScoutWeb.LayoutView do
   def dropdown_head_main_nets do
     dropdown_nets()
     |> main_nets()
-    |> Enum.reject(&Map.get(&1, :other?))
   end
 
   def dropdown_other_nets do
