@@ -13,7 +13,7 @@ defmodule BlockScoutWeb.LayoutView do
       url: "https://scan.bosagora.org"
     },
     %{
-      title: "BizTestNet",
+      title: "BizNet testnet",
       url: "https://testnet-scan.bosagora.org",
       test_net?: true
     },
