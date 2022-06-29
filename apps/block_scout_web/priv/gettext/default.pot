@@ -25,7 +25,7 @@ msgstr ""
 #: lib/block_scout_web/templates/address/_metatags.html.eex:3
 #, elixir-autogen, elixir-format
 msgid "%{address} - %{subnetwork} Explorer"
-msgstr ""
+msgstr "%{address} - %{subnetwork} BOASCAN"
 
 #: lib/block_scout_web/templates/block/overview.html.eex:12
 #, elixir-autogen, elixir-format
@@ -56,12 +56,12 @@ msgstr ""
 #: lib/block_scout_web/templates/chain/_metatags.html.eex:2
 #, elixir-autogen, elixir-format
 msgid "%{subnetwork} %{network} Explorer"
-msgstr ""
+msgstr "%{subnetwork} BOASCAN"
 
 #: lib/block_scout_web/templates/layout/_default_title.html.eex:2
 #, elixir-autogen, elixir-format
 msgid "%{subnetwork} Explorer - BlockScout"
-msgstr ""
+msgstr "%{subnetwork} BOASCAN"
 
 #: lib/block_scout_web/views/transaction_view.ex:369
 #, elixir-autogen, elixir-format
@@ -421,7 +421,7 @@ msgstr ""
 #: lib/block_scout_web/templates/block/_metatags.html.eex:3
 #, elixir-autogen, elixir-format
 msgid "Block %{block_number} - %{subnetwork} Explorer"
-msgstr ""
+msgstr "Block %{block_number} - %{subnetwork} BOASCAN"
 
 #: lib/block_scout_web/templates/block_transaction/404.html.eex:7
 #, elixir-autogen, elixir-format
@@ -2780,7 +2780,7 @@ msgstr ""
 #: lib/block_scout_web/templates/address/_metatags.html.eex:13
 #, elixir-autogen, elixir-format
 msgid "Top Accounts - %{subnetwork} Explorer"
-msgstr ""
+msgstr "Top Accounts - %{subnetwork} BOASCAN"
 
 #: lib/block_scout_web/templates/address_logs/index.html.eex:14
 #, elixir-autogen, elixir-format
@@ -2850,7 +2850,7 @@ msgstr ""
 #: lib/block_scout_web/templates/transaction/_metatags.html.eex:3
 #, elixir-autogen, elixir-format
 msgid "Transaction %{transaction} - %{subnetwork} Explorer"
-msgstr ""
+msgstr "Transaction %{transaction} - %{subnetwork} BOASCAN"
 
 #: lib/block_scout_web/templates/transaction/_metatags.html.eex:11
 #, elixir-autogen, elixir-format
