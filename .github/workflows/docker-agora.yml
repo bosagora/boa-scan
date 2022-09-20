@@ -37,4 +37,4 @@ jobs:
         file: ./docker/Dockerfile
         # Either 'success' or 'skipped'
         push: ${{ steps.login.outcome == 'success' }}
-        tags: bosagora/blockscout:agora
+        tags: bosagora/boa-scan:agora
