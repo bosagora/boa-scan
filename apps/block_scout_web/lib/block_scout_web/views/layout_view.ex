@@ -10,14 +10,14 @@ defmodule BlockScoutWeb.LayoutView do
   @issue_url "https://github.com/blockscout/blockscout/issues/new"
   @default_other_networks [
     %{
-      title: "BizNet",
+      title: "Agora",
       url: "https://scan.bosagora.org"
     },
     %{
-      title: "BizNet testnet",
+      title: "Agora testnet",
       url: "https://testnet-scan.bosagora.org",
       test_net?: true
-    },
+    }
   ]
 
   alias BlockScoutWeb.SocialMedia
