@@ -9,11 +9,11 @@ defmodule BlockScoutWeb.LayoutView do
 
   @default_other_networks [
     %{
-      title: "BizNet",
+      title: "Agora",
       url: "https://scan.bosagora.org"
     },
     %{
-      title: "BizTestNet",
+      title: "Agora testnet",
       url: "https://testnet-scan.bosagora.org",
       test_net?: true
     },
