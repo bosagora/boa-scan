@@ -10,12 +10,12 @@ defmodule BlockScoutWeb.LayoutView do
   @issue_url "https://github.com/blockscout/blockscout/issues/new"
   @default_other_networks [
     %{
-      title: "Agora",
-      url: "https://scan.bosagora.org"
+      title: "BOSagora",
+      url: "https://boascan.io"
     },
     %{
-      title: "Agora testnet",
-      url: "https://testnet-scan.bosagora.org",
+      title: "BOSagora testnet",
+      url: "https://testnet.boascan.io",
       test_net?: true
     }
   ]
