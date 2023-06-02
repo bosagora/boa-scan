@@ -2,7 +2,7 @@
 set -x
 
 REPO=bosagora
-RELEASE_VERSION=agora_v5.1.5    # Update this if it is rebased on a later upstream tag
+RELEASE_VERSION=agora_v4.1.3    # Update this if it is rebased on a later upstream tag
 COIN=BOA make
 RELEASE_VERSION=$RELEASE_VERSION make tag
 RELEASE_VERSION=$RELEASE_VERSION make tag-stable
